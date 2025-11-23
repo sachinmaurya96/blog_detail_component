@@ -133,11 +133,11 @@ export default function BlogPage() {
           {/* Right Sidebar - Info Cards */}
           <div className="lg:col-span-1 order-2 lg:order-3">
             <SidebarCard
-              title="Deploy on DigitalOcean"
-              description="Click below to sign up for DigitalOcean's virtual machines, Databases, and AIML products."
+              title="Sachin Maurya"
+              description="Frontend Developer & Researcher. Passionate about crafting exceptional user experiences and building digital products that matter."
               cta={{
-                text: 'Sign up',
-                url: 'https://www.digitalocean.com',
+                text: 'Contact Me',
+                url: 'https://www.linkedin.com/in/sachin-maurya-826111267/',
               }}
               backgroundColor="bg-blue-50 dark:bg-slate-950"
               accentColor="bg-gradient-to-br from-pink-400 to-purple-400"
