@@ -19,10 +19,10 @@ const dummyBlogPost: BlogPost = {
   categoryColor: 'bg-cyan-500',
   excerpt: 'A comprehensive guide to JavaScript hoisting and how it affects your code.',
   author: {
-    name: 'Mabishi Wakio',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Mabishi',
+    name: 'Sachin Maurya',
+    avatar: '/sachin.jpg',
   },
-  date: 'Updated on September 15, 2020',
+  date: 'Updated on November 23, 2025',
   readTime: 8,
   shareLinks: {
     twitter: 'https://twitter.com',
