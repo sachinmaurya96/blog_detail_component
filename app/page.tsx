@@ -82,7 +82,8 @@ export default function Home() {
                 Full Preview
               </Link>
               <Link
-                href="#"
+                href="https://github.com/sachinmaurya96/blog_detail_component"
+                target="_blank"
                 className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-input bg-background hover:bg-accent hover:text-accent-foreground font-medium transition-colors"
               >
                 <Code2 className="w-4 h-4" />
