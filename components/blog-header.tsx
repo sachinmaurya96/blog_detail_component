@@ -3,6 +3,7 @@
 import { Share2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 interface BlogHeaderProps {
   title: string;
@@ -63,20 +64,29 @@ export function BlogHeader({
           </div>
         </div>
 
+
+
         {/* Share Buttons */}
         <div className="flex items-center gap-2">
-          {shareOptions.map((option) => (
-            <Button
-              key={option.id}
-              variant="outline"
-              size="sm"
-              className="w-10 h-10 p-0"
-              onClick={() => onShare?.(option.id)}
-              title={option.label}
-            >
-              <span className="text-lg">{option.icon}</span>
-            </Button>
-          ))}
+          <TooltipProvider>
+            {shareOptions.map((option) => (
+              <Tooltip key={option.id}>
+                <TooltipTrigger asChild>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-10 h-10 p-0 cursor-pointer"
+                    onClick={() => onShare?.(option.id)}
+                  >
+                    <span className="text-lg">{option.icon}</span>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{option.label}</p>
+                </TooltipContent>
+              </Tooltip>
+            ))}
+          </TooltipProvider>
         </div>
       </div>
     </div>

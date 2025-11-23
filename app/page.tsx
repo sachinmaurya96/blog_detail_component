@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Github, Linkedin, FileText, ExternalLink, Code2, Briefcase, Coffee } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export default function Home() {
   return (
@@ -163,17 +164,28 @@ function JsonLd() {
   );
 }
 
+
+
 function SocialLink({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) {
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="p-2.5 rounded-full bg-muted/50 hover:bg-muted text-muted-foreground hover:text-foreground transition-all duration-200 hover:scale-110"
-      aria-label={label}
-    >
-      {icon}
-    </a>
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2.5 rounded-full bg-muted/50 hover:bg-muted text-muted-foreground hover:text-foreground transition-all duration-200 hover:scale-110 cursor-pointer"
+            aria-label={label}
+          >
+            {icon}
+          </a>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>{label}</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   );
 }
 
