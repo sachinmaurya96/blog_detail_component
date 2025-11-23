@@ -1,10 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Github, Linkedin, FileText, ExternalLink, Code2, Briefcase, Coffee } from "lucide-react";
+import { ModeToggle } from "@/components/mode-toggle";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/10">
+    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/10 relative">
+      <div className="absolute top-6 right-6 z-50">
+        <ModeToggle />
+      </div>
       <main className="max-w-5xl mx-auto px-6 py-20 sm:py-32">
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row gap-12 items-start md:items-center mb-24">
